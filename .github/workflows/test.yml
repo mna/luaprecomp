@@ -21,5 +21,5 @@ jobs:
       - name: Lint
         run: |
           luarocks install luacheck
-          luarocks install --deps-only ./rockspecs/*.rockspec
+          luarocks install --deps-only ./rockspecs/luaprecomp-0.2.0-1.rockspec
           luacheck ./precomp.lua ./test/

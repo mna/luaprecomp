@@ -58,6 +58,9 @@ fi
 # move it to its proper destination
 mv ./"${repo}-${NEW_VERSION}-1.rockspec" ./rockspecs/
 
+# update the version in the github workflow
+sed -i'' -Ee "s;${repo}-${PREV_VERSION}-1.rockspec;${repo}-${NEW_VERSION}-1;" ./.github/workflows/test.yml
+
 git add -A
 git commit -m "Create version ${NEW_VERSION}"
 git tag "v${NEW_VERSION}"
