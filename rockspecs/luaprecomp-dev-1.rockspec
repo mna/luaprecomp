@@ -1,13 +1,19 @@
 package = "luaprecomp"
 version = "dev-1"
 source = {
-   url = "*** please add URL for source tarball, zip or repository here ***"
+   url = ""
 }
 description = {
-   homepage = "*** please enter a project homepage ***",
-   license = "*** please specify a license ***"
+   summary = "Require pre-compiled Lua modules via standard require function.",
+   homepage = "https://github.com/mna/luaprecomp",
+   license = "BSD"
+}
+dependencies = {
+   "lua >= 5.3, < 5.5"
 }
 build = {
    type = "builtin",
-   modules = {}
+   modules = {
+     precomp = "precomp.lua"
+   }
 }
