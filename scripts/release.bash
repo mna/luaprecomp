@@ -42,7 +42,7 @@ else
 fi
 
 # create the new rockspec
-luarocks new_version ./rockspecs/"${repo}-${PREV_VERSION}.rockspec" "${NEW_VERSION}"
+luarocks new_version ./rockspecs/"${repo}-${PREV_VERSION}-1.rockspec" "${NEW_VERSION}"
 
 "${EDITOR:-vim}" ./"${repo}-${NEW_VERSION}-1.rockspec"
 
