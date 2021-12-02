@@ -65,6 +65,20 @@ Clone the project and install the required development dependencies:
 * luaunit (the unit test runner)
 * luacov (recommended, test coverage)
 
+To run tests and coverage:
+
+```
+# unit tests
+$ lua test/main.lua
+
+# test coverage
+$ lua -lluacov test/main.lua
+# generates a luacov.stats.out file
+$ luacov
+# generates a luacov.report.out file
+$ cat luacov.report.out
+```
+
 ## License
 
 The [BSD 3-clause](http://opensource.org/licenses/BSD-3-Clause) license.
