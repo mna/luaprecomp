@@ -9,6 +9,9 @@ effect (note that inserting it *before* the source code searcher means that chan
 code of `require`d modules will not be seen until it is re-compiled to bytecode, while inserting
 it *after* means that the pre-compiled version will never be used if the source code is available).
 
+This works "recursively", so to speak, in that if a pre-compiled module requires another module,
+it too will support loading from a pre-compiled file if available, and so on.
+
 ## Install
 
 Via LuaRocks:
